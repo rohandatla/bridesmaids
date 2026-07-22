@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Navigation } from "@/components/shared/Navigation";
 import { Footer } from "@/components/shared/Footer";
-import { EnvelopeIntro } from "@/components/shared/EnvelopeIntro";
+import { ButterflyIntro } from "@/components/shared/ButterflyIntro";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AskSection } from "@/components/sections/AskSection";
 import { DetailsSection } from "@/components/sections/DetailsSection";
@@ -32,7 +32,7 @@ export default function Home() {
   }
 
   if (!guestName) {
-    return <EnvelopeIntro onOpened={handleOpened} />;
+    return <ButterflyIntro onOpened={handleOpened} />;
   }
 
   return (
