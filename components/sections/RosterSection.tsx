@@ -3,6 +3,7 @@
 import { FadeInWhenVisible } from "@/components/animations/FadeInWhenVisible";
 import { BRIDESMAID_DATA } from "@/lib/constants";
 import { Users } from "lucide-react";
+import Image from "next/image";
 
 export function RosterSection() {
   return (
@@ -31,11 +32,32 @@ export function RosterSection() {
                     member.role === "Maid of Honor" ? "bg-primary text-white" : "bg-white text-gray-900"
                   }`}
                 >
-                  <div className="flex items-baseline gap-3 mb-3">
-                    <p className="font-serif text-2xl">{member.name}</p>
-                    <p className="text-xs uppercase tracking-widest font-semibold text-secondary">
-                      {member.role}
-                    </p>
+                  <div className="flex items-center gap-4 mb-3">
+                    {member.photo ? (
+                      <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-secondary">
+                        <Image
+                          src={member.photo}
+                          alt={member.name}
+                          fill
+                          className="object-cover"
+                          sizes="64px"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className={`w-16 h-16 rounded-full shrink-0 flex items-center justify-center font-serif text-xl ring-2 ring-secondary ${
+                          member.role === "Maid of Honor" ? "bg-white/20 text-white" : "bg-accent text-primary"
+                        }`}
+                      >
+                        {member.name[0]}
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-serif text-2xl leading-tight">{member.name}</p>
+                      <p className="text-xs uppercase tracking-widest font-semibold text-secondary">
+                        {member.role}
+                      </p>
+                    </div>
                   </div>
                   <p
                     className={`leading-relaxed ${

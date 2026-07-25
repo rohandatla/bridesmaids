@@ -3,6 +3,7 @@
 import { FadeInWhenVisible } from "@/components/animations/FadeInWhenVisible";
 import { BRIDESMAID_DATA } from "@/lib/constants";
 import { CalendarDays } from "lucide-react";
+import Link from "next/link";
 
 export function DetailsSection() {
   return (
@@ -30,17 +31,17 @@ export function DetailsSection() {
                 <p className="font-serif text-2xl md:text-3xl text-primary mb-3">
                   {detail.value}
                 </p>
-                <p className="text-gray-600">{detail.note}</p>
-                {detail.link && (
-                  <a
-                    href={detail.link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-4 text-sm font-semibold text-secondary hover:text-secondary/80 underline underline-offset-4"
-                  >
-                    {detail.link.label} →
-                  </a>
-                )}
+                <p className="text-gray-600">
+                  {detail.note}{" "}
+                  {detail.link && (
+                    <Link
+                      href={detail.link.url}
+                      className="font-semibold text-secondary hover:text-secondary/80 underline underline-offset-4 whitespace-nowrap"
+                    >
+                      {detail.link.label} →
+                    </Link>
+                  )}
+                </p>
               </div>
             </FadeInWhenVisible>
           ))}
