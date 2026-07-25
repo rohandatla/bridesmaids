@@ -29,14 +29,8 @@ export const BRIDESMAID_DATA = {
     },
     {
       label: "Attire",
-      value: "TBD",
-      note: "Dress details are still being finalized — color, style, and where to order will be shared soon.",
-      link: null as { url: string; label: string } | null,
-    },
-    {
-      label: "Bachelorette Party",
-      value: "TBD",
-      note: "Planning in progress — stay tuned.",
+      value: "It's a Surprise",
+      note: "I'll be gifting each of you a saree to wear for the traditional wedding ceremony. For the remaining events, feel free to wear whatever you'd like while following the general dress code.",
       link: null as { url: string; label: string } | null,
     },
     {
@@ -47,17 +41,57 @@ export const BRIDESMAID_DATA = {
     },
   ],
   roster: [
-    { name: "Teju", role: "Maid of Honor" },
-    { name: "Bhumika", role: "Bridesmaid" },
-    { name: "Sanjana", role: "Bridesmaid" },
-    { name: "Archana", role: "Bridesmaid" },
-    { name: "Sowmya", role: "Bridesmaid" },
-    { name: "Nitisha", role: "Bridesmaid" },
-    { name: "Neha", role: "Bridesmaid" },
-    { name: "Sravani", role: "Bridesmaid" },
-    { name: "Sonu", role: "Bridesmaid" },
-    { name: "Harshitha", role: "Bridesmaid" },
-  ] as { name: string; role: string }[],
+    {
+      name: "Teju",
+      role: "Maid of Honor",
+      intro: "Teju is my dearest sister, and I've had the privilege of knowing and growing up with her my entire life. She's been my constant source of love, support, and laughter through every stage of life, and I couldn't imagine this journey without her by my side.",
+    },
+    {
+      name: "Bhumika",
+      role: "Bridesmaid",
+      intro: "Bhumika is my cutest baby cousin, my built-in bestie, and the one I share everything with. I've basically raised her (lol), and she'll always be my little baby. But as much as I like to say I raised her, I've learned so much from her too. I'm grateful to have them in my life.",
+    },
+    {
+      name: "Sanjana",
+      role: "Bridesmaid",
+      intro: "I met Sanjana during my undergraduate years, and ever since, she's been my 2 a.m. friend, the person I can call about absolutely anything. Through every high, low, and everything in between, she's been a constant source of support, laughter, and honest advice.",
+    },
+    {
+      name: "Archana",
+      role: "Bridesmaid",
+      intro: "I met Archana on the very first day of college, and we've shared so many great memories ever since. From bunking classes to getting ready together and dancing the night away, she's always made every moment more fun.",
+    },
+    {
+      name: "Sowmya",
+      role: "Bridesmaid",
+      intro: "I've known Sowmya Akka since school, when she was my senior. While she's my sister's best friend, she's also become a close friend to me and someone I've always looked up to. I'll never forget my first visit to Ohio, where she took such great care of me and truly went above and beyond to make me feel at home.",
+    },
+    {
+      name: "Nitisha",
+      role: "Bridesmaid",
+      intro: "I've known Nitisha since school, and somehow our friendship started with a chance meeting in the restroom. Since then, it's been endless conversations, so much love, and countless laughs. Even after she moved to Delhi, our friendship never skipped a beat. She's one of the funniest and most cheerful people I know.",
+    },
+    {
+      name: "Neha",
+      role: "Bridesmaid",
+      intro: "Neha is my cutest roommate and one of the most caring people I know. She's my painting, cooking, walking and Bridgerton buddy, and somehow always finds a way to keep my belly full haha. Whether it's trying out new recipes or just spending time together, she brings so much warmth and joy into everyday moments.",
+    },
+    {
+      name: "Sravani",
+      role: "Bridesmaid",
+      intro: "I've known Sravani since school, and somehow we ended up sharing the same school, intermediate, and undergrad journey. She's been my go-to study buddy, someone who patiently listens to all my thoughts, and a friend who's always there when you need her.",
+    },
+    {
+      name: "Sonu",
+      role: "Bridesmaid",
+      intro: "I met Sonu during my Master's. Even though she went to a different school, it's easy to forget, since we became so close so fast. She's hardworking, endlessly positive, and brings cheer wherever she goes. From spontaneous GRWMs to countless fun memories along the way, she's been a constant source of joy in my life.",
+    },
+    {
+      name: "Harshitha",
+      role: "Bridesmaid",
+      intro: "Harshitha and I grew up together. She's a close family friend, and our friendship actually spans generations, since her mom and my mom grew up together too. I've always admired her love for animals. She exudes such calmness and is one of the easiest people to just hang out with.",
+    },
+  ] as { name: string; role: string; intro: string }[],
   contact: {
     email: "priya@example.com",
     hashtag: "#BridesmaidsForPriya",

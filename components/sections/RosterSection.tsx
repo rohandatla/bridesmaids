@@ -23,17 +23,26 @@ export function RosterSection() {
         {BRIDESMAID_DATA.roster.length === 0 ? (
           <p className="text-center text-gray-500 italic">Bridal party list coming soon.</p>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {BRIDESMAID_DATA.roster.map((member, index) => (
               <FadeInWhenVisible key={`${member.name}-${index}`} delay={index * 0.05}>
                 <div
-                  className={`rounded-2xl p-6 text-center shadow-lg h-full ${
+                  className={`rounded-2xl p-6 md:p-8 shadow-lg h-full ${
                     member.role === "Maid of Honor" ? "bg-primary text-white" : "bg-white text-gray-900"
                   }`}
                 >
-                  <p className="font-serif text-xl md:text-2xl mb-2">{member.name}</p>
-                  <p className="text-xs uppercase tracking-widest font-semibold text-secondary">
-                    {member.role}
+                  <div className="flex items-baseline gap-3 mb-3">
+                    <p className="font-serif text-2xl">{member.name}</p>
+                    <p className="text-xs uppercase tracking-widest font-semibold text-secondary">
+                      {member.role}
+                    </p>
+                  </div>
+                  <p
+                    className={`leading-relaxed ${
+                      member.role === "Maid of Honor" ? "text-white/85" : "text-gray-600"
+                    }`}
+                  >
+                    {member.intro}
                   </p>
                 </div>
               </FadeInWhenVisible>
