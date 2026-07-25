@@ -14,7 +14,7 @@ export default function InspoPage() {
         </Link>
 
         <h1 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4">
-          Haldi & Sangeet Inspo
+          Haldi, Carnival & Reception Inspo
         </h1>
         <p className="text-lg text-gray-600 mb-10">
           Just a starting point — wear whatever you like as long as it fits the vibe.
@@ -23,7 +23,7 @@ export default function InspoPage() {
         <div className="relative w-full h-[70vh] md:h-[75vh] rounded-2xl overflow-hidden shadow-2xl bg-white">
           <Image
             src="/bridesmaids/inspo.jpg"
-            alt="Haldi and Sangeet outfit inspiration"
+            alt="Haldi, Carnival, and Reception outfit inspiration"
             fill
             className="object-contain"
             sizes="(max-width: 768px) 100vw, 700px"

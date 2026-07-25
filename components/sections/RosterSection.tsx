@@ -32,20 +32,24 @@ export function RosterSection() {
                     member.role === "Maid of Honor" ? "bg-primary text-white" : "bg-white text-gray-900"
                   }`}
                 >
-                  <div className="flex items-center gap-4 mb-3">
+                  <div className="flex items-center gap-5 mb-4">
                     {member.photo ? (
-                      <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-secondary">
+                      <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden shrink-0 ring-4 ring-secondary">
                         <Image
                           src={member.photo}
                           alt={member.name}
                           fill
                           className="object-cover"
-                          sizes="64px"
+                          sizes="(max-width: 768px) 96px, 112px"
+                          style={{
+                            objectPosition: member.photoPosition ?? "center",
+                            transform: member.photoZoom ? `scale(${member.photoZoom})` : undefined,
+                          }}
                         />
                       </div>
                     ) : (
                       <div
-                        className={`w-16 h-16 rounded-full shrink-0 flex items-center justify-center font-serif text-xl ring-2 ring-secondary ${
+                        className={`w-24 h-24 md:w-28 md:h-28 rounded-full shrink-0 flex items-center justify-center font-serif text-3xl ring-4 ring-secondary ${
                           member.role === "Maid of Honor" ? "bg-white/20 text-white" : "bg-accent text-primary"
                         }`}
                       >

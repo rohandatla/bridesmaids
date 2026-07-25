@@ -30,7 +30,7 @@ export const BRIDESMAID_DATA = {
     {
       label: "Attire",
       value: "It's a Surprise",
-      note: "I'll be gifting each of you a saree to wear for the traditional ceremony. For Haldi and Sangeet, feel free to wear whatever you'd like while following the general dress code — take a look at some",
+      note: "I'll be gifting each of you a saree to wear for the traditional ceremony. For Haldi, Carnival, and Reception, feel free to wear whatever you'd like while following the general dress code — take a look at some",
       link: { url: "/inspo", label: "outfit inspo" } as { url: string; label: string } | null,
     },
     {
@@ -46,6 +46,7 @@ export const BRIDESMAID_DATA = {
       role: "Maid of Honor",
       intro: "Teju is my dearest sister, and I've had the privilege of knowing and growing up with her my entire life. She's been my constant source of love, support, and laughter through every stage of life, and I couldn't imagine this journey without her by my side.",
       photo: "/bridesmaids/teju.jpg",
+      photoPosition: "center 25%",
     },
     {
       name: "Bhumika",
@@ -70,6 +71,7 @@ export const BRIDESMAID_DATA = {
       role: "Bridesmaid",
       intro: "I've known Sowmya Akka since school, when she was my senior. While she's my sister's best friend, she's also become a close friend to me and someone I've always looked up to. I'll never forget my first visit to Ohio, where she took such great care of me and truly went above and beyond to make me feel at home.",
       photo: "/bridesmaids/sowmya.jpg",
+      photoZoom: 1.3,
     },
     {
       name: "Nitisha",
@@ -78,16 +80,16 @@ export const BRIDESMAID_DATA = {
       photo: "/bridesmaids/nitisha.jpg",
     },
     {
-      name: "Neha",
-      role: "Bridesmaid",
-      intro: "Neha is my cutest roommate and one of the most caring people I know. She's my painting, cooking, walking and Bridgerton buddy, and somehow always finds a way to keep my belly full haha. Whether it's trying out new recipes or just spending time together, she brings so much warmth and joy into everyday moments.",
-      photo: "/bridesmaids/neha.jpg",
-    },
-    {
       name: "Sravani",
       role: "Bridesmaid",
       intro: "I've known Sravani since school, and somehow we ended up sharing the same school, intermediate, and undergrad journey. She's been my go-to study buddy, someone who patiently listens to all my thoughts, and a friend who's always there when you need her.",
       photo: "/bridesmaids/sravani.jpg",
+    },
+    {
+      name: "Neha",
+      role: "Bridesmaid",
+      intro: "Neha is my cutest roommate and one of the most caring people I know. She's my painting, cooking, walking and Bridgerton buddy, and somehow always finds a way to keep my belly full haha. Whether it's trying out new recipes or just spending time together, she brings so much warmth and joy into everyday moments.",
+      photo: "/bridesmaids/neha.jpg",
     },
     {
       name: "Sonu",
@@ -101,7 +103,14 @@ export const BRIDESMAID_DATA = {
       intro: "Harshitha and I grew up together. She's a close family friend, and our friendship actually spans generations, since her mom and my mom grew up together too. I've always admired her love for animals. She exudes such calmness and is one of the easiest people to just hang out with.",
       photo: "/bridesmaids/harshitha.jpg",
     },
-  ] as { name: string; role: string; intro: string; photo: string | null }[],
+  ] as {
+    name: string;
+    role: string;
+    intro: string;
+    photo: string | null;
+    photoPosition?: string;
+    photoZoom?: number;
+  }[],
   contact: {
     email: "priya@example.com",
     hashtag: "#BridesmaidsForPriya",
